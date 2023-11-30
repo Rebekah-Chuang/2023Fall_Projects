@@ -129,7 +129,7 @@ def calculate_age_delta(df: pd.DataFrame, start: str, end: str, unit: str = "day
     >>> test_df = pd.DataFrame(test)
     >>> calculate_age_delta(test_df, "date_of_birth", "date_leave", unit="years", col_suffix="leaving")
     0    1.1
-    Name: age_upon_leaving, dtype: float64
+    Name: age_upon_leaving(years), dtype: float64
 
     Calculate the duration from the start date to the end date in days
     >>> test2 = {"date_start":["2014-04-02 15:55:00"], "date_end":["2015-04-27 14:45:00"]}
@@ -138,12 +138,12 @@ def calculate_age_delta(df: pd.DataFrame, start: str, end: str, unit: str = "day
     >>> test_df2 = pd.DataFrame(test2)
     >>> calculate_age_delta(test_df2, "date_start", "date_end", unit="days")
     0    389
-    Name: duration, dtype: int64
+    Name: duration(days), dtype: int64
     """
     age_time_delta = df[end] - df[start]
     age_in_days = age_time_delta.dt.days
     if start == "date_of_birth":
-        column_name = f"age_upon_{col_suffix}"
+        column_name = f"age_upon_{col_suffix}({unit})"
         if unit == "years":
             age_in_years = round(age_in_days / 365.25, 1)
             df[column_name] = age_in_years
@@ -151,7 +151,7 @@ def calculate_age_delta(df: pd.DataFrame, start: str, end: str, unit: str = "day
             df[column_name] = age_in_days
 
     else:
-        column_name = "duration"
+        column_name = f"duration({unit})"
         df[column_name] = age_in_days
 
     return df[column_name]
