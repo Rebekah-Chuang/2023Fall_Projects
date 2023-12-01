@@ -60,12 +60,13 @@ def date_format(df: pd.DataFrame, col: str, datetime_format: str) -> pd.DataFram
     return df
 
 
-def merge_intake_n_outcome(intake_data, outcome_data):
+def merge_intake_n_outcome(intake_data: pd.DataFrame, outcome_data: pd.DataFrame) -> pd.DataFrame:
     """
+    Merges intake and outcome datasets based on animal_id, intake_datetime, and outcome_datetime.
 
-    :param intake_data:
-    :param outcome_data:
-    :return:
+    :param intake_data: DataFrame containing intake information
+    :param outcome_data: DataFrame containing outcome information
+    :return: Merged DataFrame containing intake and outcome information
 
     >>> test_intake = pd.read_csv("test_data/test_intake.csv")
     >>> test_intake_data = pd.DataFrame(test_intake)
@@ -81,9 +82,8 @@ def merge_intake_n_outcome(intake_data, outcome_data):
     3         c 2021-11-25 15:50:00 2021-11-25 15:50:00 2021-11-25 15:50:00
     4         d 2022-03-07 21:05:00 2022-09-18 08:30:00 2022-09-18 08:30:00
     5         e 2023-07-18 12:15:00                 NaT                 NaT
-
     """
-    # create a dictionary to store each outcome datetime for an animal, where key:animal_id, value:[outcome datetime]
+    # Create a dictionary to store each outcome datetime for an animal, where key:animal_id, value:[outcome_datetime]
     outcome_dict = {}
     for index, row in outcome_data.iterrows():
         if row.animal_id not in outcome_dict.keys():
@@ -91,8 +91,8 @@ def merge_intake_n_outcome(intake_data, outcome_data):
             outcome_dict[row.animal_id].append(row.datetime)
         else:
             outcome_dict[row.animal_id].append(row.datetime)
-    # outcome_dict
 
+    # Iterate over each row in intake data to store outcome_datetime for each animal
     intake_data['datetime_outcome'] = pd.NaT
     for index, row in intake_data.iterrows():
         if row.animal_id in outcome_dict.keys():
@@ -100,6 +100,7 @@ def merge_intake_n_outcome(intake_data, outcome_data):
                 intake_data.at[index, "datetime_outcome"] = outcome_dict[row.animal_id][0]
                 outcome_dict[row.animal_id].pop(0)
 
+    # Merge the intake and outcome dataframes based on animal_id, outcome datetime
     merged_data = pd.merge(intake_data,
                            outcome_data,
                            how="left",
@@ -110,7 +111,7 @@ def merge_intake_n_outcome(intake_data, outcome_data):
     return merged_data
 
 
-def calculate_age_delta(df: pd.DataFrame, start: str, end: str, unit: str = "days", col_suffix: str = "") -> pd.DataFrame:
+def calculate_time_delta(df: pd.DataFrame, start: str, end: str, unit: str = "days", col_suffix: str = "") -> pd.DataFrame:
     """
     Calculate the age difference or duration between two dates in a DataFrame.
 
@@ -127,7 +128,7 @@ def calculate_age_delta(df: pd.DataFrame, start: str, end: str, unit: str = "day
     >>> test["date_of_birth"] = pd.to_datetime(test["date_of_birth"])
     >>> test["date_leave"] = pd.to_datetime(test["date_leave"])
     >>> test_df = pd.DataFrame(test)
-    >>> calculate_age_delta(test_df, "date_of_birth", "date_leave", unit="years", col_suffix="leaving")
+    >>> calculate_time_delta(test_df, "date_of_birth", "date_leave", unit="years", col_suffix="leaving")
     0    1.1
     Name: age_upon_leaving(years), dtype: float64
 
@@ -136,22 +137,22 @@ def calculate_age_delta(df: pd.DataFrame, start: str, end: str, unit: str = "day
     >>> test2["date_start"] = pd.to_datetime(test2["date_start"])
     >>> test2["date_end"] = pd.to_datetime(test2["date_end"])
     >>> test_df2 = pd.DataFrame(test2)
-    >>> calculate_age_delta(test_df2, "date_start", "date_end", unit="days")
+    >>> calculate_time_delta(test_df2, "date_start", "date_end", unit="days")
     0    389
     Name: duration(days), dtype: int64
     """
-    age_time_delta = df[end] - df[start]
-    age_in_days = age_time_delta.dt.days
+    time_delta = df[end] - df[start]
+    time_in_days = time_delta.dt.days
     if start == "date_of_birth":
         column_name = f"age_upon_{col_suffix}({unit})"
         if unit == "years":
-            age_in_years = round(age_in_days / 365.25, 1)
-            df[column_name] = age_in_years
+            time_in_years = round(time_in_days / 365.25, 1)
+            df[column_name] = time_in_years
         else:
-            df[column_name] = age_in_days
+            df[column_name] = time_in_days
 
     else:
         column_name = f"duration({unit})"
-        df[column_name] = age_in_days
+        df[column_name] = time_in_days
 
     return df[column_name]
