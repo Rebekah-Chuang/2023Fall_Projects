@@ -40,3 +40,6 @@
 | `age_upon_outcome` | age upon outcome of animal       | text                 |
 | `breed`            | breed of animal                  | text                 |
 | `color`            | color of animal                  | text                 |
+
+Citations:
+1. [Austin Guide to Dogs and Cats in Our City](https://www.austintexas.gov/sites/default/files/files/AAC/Austin%20Guide%20to%20Dogs%20and%20Cats.pdf)
