@@ -16,3 +16,19 @@ def no_kill_rate(df, intake_col, outcome_col):
     cases["save_rate(euthanasia)"] = (1 - (cases["euthanasia_cases"]/cases["total_intake"]))*100.0
 
     return cases
+
+
+def create_time_column(df, intake_date, outcome_date):
+    df["intake_datetime"] = pd.to_datetime(df[intake_date])
+    df["outcome_datetime"] = pd.to_datetime(df[outcome_date])
+
+    df["intake_y_m"] = df[intake_date].dt.to_period("M").astype(str)
+    df["outcome_y_m"] = df[outcome_date].dt.to_period("M").astype(str)
+
+    df["intake_yr"] = df[intake_date].dt.to_period("Y").astype(str)
+    df["outcome_yr"] = df[outcome_date].dt.to_period("Y").astype(str)
+
+    df["intake_m"] = pd.to_datetime(df[intake_date], format='%m').dt.month_name()
+    df["outcome_m"] = pd.to_datetime(df[outcome_date], format='%m').dt.month_name()
+
+    return df
