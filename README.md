@@ -43,3 +43,4 @@
 
 Citations:
 1. [Austin Guide to Dogs and Cats in Our City](https://www.austintexas.gov/sites/default/files/files/AAC/Austin%20Guide%20to%20Dogs%20and%20Cats.pdf)
+2. [No Kill calculation](https://bestfriends.org/no-kill-2025/animal-shelter-statistics/map-methodology)
