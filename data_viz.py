@@ -30,7 +30,7 @@ def save_rate_line_plot(df, title_text):
     # create line plot
         fig = px.line(df,
                 x="time",
-                y=["save_rate(total died)", "save_rate(euthanasia)"],
+                y=["save_rate(total death)", "save_rate(euthanasia)"],
                 title=f"Save Rate {title_text}")
 
         # update overall layout
