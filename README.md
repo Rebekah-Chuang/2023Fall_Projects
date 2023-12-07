@@ -75,3 +75,5 @@ Does the city of Austin maintain a save rate of **90%** or higher for animals, t
 3. [The Pros and Cons of Spaying and Neutering an Older Dog](https://be.chewy.com/all-about-spay-and-neuter-in-senior-dogs/)
 4. [Spay and Neuter Surgery for Dogs](https://www.springhouseanimalhospital.com/site/blog/2022/06/15/how-old-is-too-old-to-spay-or-neuter-my-dog)
 5. [Austin and Travis County have adopted new Orders to align with statewide restrictions aimed at slowing the spread of COVID-19.](https://web.archive.org/web/20201229180748/https://www.austintexas.gov/news/new-orders-align-covid-19-restrictions-statewide)
+
+Note: The visualizations might be too large to show on GitHub, you can check the interactive visualizations on this [page](https://rebekah-chuang.quarto.pub/portfolio/posts/Pet_Adoption_Analysis_in_Austin/) if you want, though it's not the final version.
