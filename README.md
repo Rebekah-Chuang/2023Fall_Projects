@@ -73,7 +73,7 @@ Does age influence the probability of adoption for animals?
 ### Research Question 1:
 Does the city of Austin maintain a save rate of **90%** or higher for animals, thereby meeting the criteria to be classified as a **no-kill city**?
 
-## Citations:
+## **Citations:**
 1. Best Friends Animal Society. (2023). [Animal Shelter Statistics: Map Methodology.](https://bestfriends.org/no-kill-2025/animal-shelter-statistics/map-methodology)
 2. City of Austin. (2023). [Austin Animal Center Intakes.](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm)
 3. City of Austin. (2023). [Austin Animal Center Outcomes.](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes/9t4d-g238)
