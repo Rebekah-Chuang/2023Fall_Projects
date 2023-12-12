@@ -73,6 +73,17 @@ Does age influence the probability of adoption for animals?
 ### Research Question 1:
 Does the city of Austin maintain a save rate of **90%** or higher for animals, thereby meeting the criteria to be classified as a **no-kill city**?
 
+## Instructions:
+1. Clone the repository using `git clone https://github.com/Rebekah-Chuang/Pet-Adoption-Trends-in-Austin-Texas.git` in your terminal.
+2. Run `data_cleaning.ipynb` to fetch the latest version of the data and conduct data cleaning.
+3. Run `eda.ipynb` to explore the exploratory data analysis.
+4. Run `hypothesis1_neuter_spay.ipynb`, `hypothesis2_adoption_rate_change.ipynb`, `hypothesis3_intake_condition.ipynb`, `hypothesis4_age_adoption.ipynb` to explore the four hypotheses.
+
+5. Run `research1_no_kill_rate.ipynb` to review the results of the research question analysis.
+ - Functions used in data cleaning can be found in `data_cleaning_functions.py`
+ - Functions used in hypotheses and research questions are available in `hypothesis_functions.py`
+ - Functions used in data visualizations are located in `data_viz.py`
+
 ## **Citations:**
 1. Best Friends Animal Society. (2023). [Animal Shelter Statistics: Map Methodology.](https://bestfriends.org/no-kill-2025/animal-shelter-statistics/map-methodology)
 2. City of Austin. (2023). [Austin Animal Center Intakes.](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm)
