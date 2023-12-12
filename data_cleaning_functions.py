@@ -3,14 +3,14 @@ This data_cleaning_functions.py file includes all functions I used for data clea
 """
 import requests
 import pandas as pd
-# import numpy as np
 
 
 def get_data(urls: dict):
     """
+    Fetches the latest data from API endpoints provided by Austin Animal Center.
+
     :param urls: a dictionary of data file where key is the file_name and value is the url for that dataset
     :return: intake_data and outcome_data
-
     """
     # Store data in dictionaries
     data_dict = {}
@@ -38,6 +38,13 @@ def get_data(urls: dict):
 
 def date_format(df: pd.DataFrame, col: str, datetime_format: str) -> pd.DataFrame:
     """
+    Modify the datetime format of a specified column in the dataframe.
+
+    :param df: dataframe you want to modify
+    :param col: column in the dataframe you would like to change the date format
+    :param datetime_format: the data or time format you want
+    :return: the updated dataframe
+
     >>> test = {"date":["2014-04-02 15:55:00"]}
     >>> test_df = pd.DataFrame(test)
     >>> date_format(test_df, "date", "%Y-%m-%d")["date"]
@@ -49,11 +56,6 @@ def date_format(df: pd.DataFrame, col: str, datetime_format: str) -> pd.DataFram
     >>> date_format(test_df2, "date", "%Y-%m-%d %H:%M")["date"]
     0   2013-10-11 11:29:00
     Name: date, dtype: datetime64[ns]
-
-    :param df: dataframe you want to modify
-    :param col: column in the dataframe you would like to change the date format
-    :param datetime_format: the data or time format you want
-    :return: the updated dataframe
     """
     df[col] = pd.to_datetime(df[col])
     df[col] = pd.to_datetime(df[col].dt.strftime(datetime_format))
