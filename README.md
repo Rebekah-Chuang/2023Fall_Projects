@@ -1,8 +1,12 @@
-# Pet Adoption Trends in Austin, Texas: Impact & Analysis
+## Pet Adoption Trends in Austin, Texas: Impact & Analysis
 
 ## Data:
-1. Introduction: The data is collected and provided by the [City of Austin, Texas](https://data.austintexas.gov/), spanning from October 1st, 2013, to the present day (updated daily). These datasets track the journey of animals from intake to eventual adoption, including those still awaiting adoption.
-2. Source: [Austin Animal Center Intakes](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm), [Austin Animal Center Outcomes](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes/9t4d-g238)
+1. Introduction:
+The data is collected and provided by the [City of Austin, Texas](https://data.austintexas.gov/), spanning from October 1st, 2013, to the present day (updated daily). These datasets track the journey of animals from intake to eventual adoption, including those still awaiting adoption.
+
+2. Source:
+[Austin Animal Center Intakes](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm), [Austin Animal Center Outcomes](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes/9t4d-g238)
+
 3. Description:
 
 **Austin Animal Center Intake:**
@@ -63,17 +67,26 @@ Does intake condition influence the probability of adoption for animals?
 Does age influence the probability of adoption for animals?
 
  - $H0$: There is no significant relationship between animals' age and their likelihood of adoption.
-  - $H1$: There is a significant relationship between animals' age and their likelihood of adoption.
+ - $H1$: There is a significant relationship between animals' age and their likelihood of adoption.
 
-## Research Questions
+## **Research Questions**
 ### Research Question 1:
 Does the city of Austin maintain a save rate of **90%** or higher for animals, thereby meeting the criteria to be classified as a **no-kill city**?
 
 ## Citations:
-1. [Austin Guide to Dogs and Cats in Our City](https://www.austintexas.gov/sites/default/files/files/AAC/Austin%20Guide%20to%20Dogs%20and%20Cats.pdf)
-2. [No Kill calculation](https://bestfriends.org/no-kill-2025/animal-shelter-statistics/map-methodology)
-3. [The Pros and Cons of Spaying and Neutering an Older Dog](https://be.chewy.com/all-about-spay-and-neuter-in-senior-dogs/)
-4. [Spay and Neuter Surgery for Dogs](https://www.springhouseanimalhospital.com/site/blog/2022/06/15/how-old-is-too-old-to-spay-or-neuter-my-dog)
-5. [Austin and Travis County have adopted new Orders to align with statewide restrictions aimed at slowing the spread of COVID-19.](https://web.archive.org/web/20201229180748/https://www.austintexas.gov/news/new-orders-align-covid-19-restrictions-statewide)
+Best Friends Animal Society. (2023). Animal Shelter Statistics: Map Methodology. Retrieved from [here](https://bestfriends.org/no-kill-2025/animal-shelter-statistics/map-methodology)
 
-Note: The visualizations might be too large to show on GitHub, you can check the interactive visualizations on this [page](https://rebekah-chuang.quarto.pub/portfolio/posts/Pet_Adoption_Analysis_in_Austin/) if you want, though it's not the final version!
+City of Austin. (2023). Austin Animal Center Intakes. Retrieved from [here](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm)
+
+City of Austin. (2023). Austin Animal Center Outcomes. Retrieved from [here](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes/9t4d-g238)
+
+City of Austin. (2020, March 20). New Orders to Align COVID-19 Restrictions Statewide. Retrieved from [here](https://web.archive.org/web/20201229180748/https://www.austintexas.gov/news/new-orders-align-covid-19-restrictions-statewide)
+
+City of Austin, Texas. (n.d.). Austin Guide to Dogs and Cats. Retrieved from [here](https://www.austintexas.gov/sites/default/files/files/AAC/Austin%20Guide%20to%20Dogs%20and%20Cats.pdf)
+
+Koschalk, K. (Chewy). (2023, October 25). The Pros and Cons of Spaying and Neutering an Older Dog. Retrieved from [here](https://be.chewy.com/all-about-spay-and-neuter-in-senior-dogs/)
+
+Spring House Animal Hospital. (2022, June 15). How Old is Too Old to Spay or Neuter My Dog. Retrieved from [here](https://www.springhouseanimalhospital.com/site/blog/2022/06/15/how-old-is-too-old-to-spay-or-neuter-my-dog)
+
+> [!NOTE]  
+> The visualizations might be too large to show on GitHub, you can check the interactive visualizations on this [page](https://rebekah-chuang.quarto.pub/portfolio/posts/Pet_Adoption_Analysis_in_Austin/) if you want, though it's not the final version!
