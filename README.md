@@ -74,7 +74,8 @@ Does age influence the probability of adoption for animals?
 Does the city of Austin maintain a save rate of **90%** or higher for animals, thereby meeting the criteria to be classified as a **no-kill city**?
 
 ## Instructions:
-1. Clone the repository using `git clone https://github.com/Rebekah-Chuang/Pet-Adoption-Trends-in-Austin-Texas.git` in your terminal.
+1. Clone the repository:
+```git clone https://github.com/Rebekah-Chuang/Pet-Adoption-Trends-in-Austin-Texas.git```
 2. Run `data_cleaning.ipynb` to fetch the latest version of the data and conduct data cleaning.
 3. Run `eda.ipynb` to explore the exploratory data analysis.
 4. Run `hypothesis1_neuter_spay.ipynb`, `hypothesis2_adoption_rate_change.ipynb`, `hypothesis3_intake_condition.ipynb`, `hypothesis4_age_adoption.ipynb` to explore the four hypotheses.
